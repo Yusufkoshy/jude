@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>إنشاء حملة</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./main.css">
+</head>
+<body class="container">
+
+  <div class="shadow-box mw-800">
+    <!-- Headline -->
+    <div class="text-center mb-4">
+      <h1 class="title">إنشاء حملة</h1>
+      <div class="separator"></div>
+      <p class="subtitle">
+        تمنحك هذه الخدمة فرصة فريدة للمساهمة عبر منصة جود في دعم مختلف المجالات الخيرية. كن جزءًا من تحقيق التعاون والتكافل، واسهم في إحداث تأثير إيجابي يترك بصمة طيبة في حياة الآخرين
+      </p>
+    </div>
+
+    <!-- Form -->
+    <form onsubmit="event.preventDefault()">
+
+      <!-- مجالات التبرع -->
+      <div class="form-group col-12 d-flex-col">
+        <label class="mb-10">مجالات التبرع</label>
+        <div class="radio-group">
+          <div class="radio-option col-sm-4 col-12">
+            <input type="radio" name="donationType" id="donation1">
+            <label for="donation1">كفالة طالب علم</label>
+          </div>
+          <div class="radio-option px-10 col-sm-4 col-12">
+            <input type="radio" name="donationType" id="donation2">
+            <label for="donation2">إفطار صائم</label>
+          </div>
+          <div class="radio-option col-sm-4 col-12">
+            <input type="radio" name="donationType" id="donation3" checked>
+            <label for="donation3">وقف</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- اسم ومطلق الحملة -->
+      <div class="row col-12 my-24">
+        <div class="col-sm-6 col-12">
+          <label class="mb-10">مطلق الحملة</label>
+          <input type="text" class="form-control custom-input" placeholder="اكتب اسم مطلق الحملة">
+        </div>
+        <div class="col-sm-6 col-12">
+          <label class="mb-10">اسم الحملة</label>
+          <input type="text" class="form-control custom-input" placeholder="اكتب عنوانا لحملتك">
+        </div>
+      </div>
+
+      <!-- المبلغ المستهدف -->
+      <div class="form-group d-flex-col col-12">
+        <label class="mb-10">المبلغ المستهدف</label>
+        <div class="radio-group ">
+          <div class="radio-option col-sm-4 col-12">
+            <input type="radio" name="amount" id="amount1" checked>
+            <label for="amount1">400 ريال</label>
+          </div>
+          <div class="radio-option px-10 col-sm-4 col-12">
+            <input type="radio" name="amount" id="amount2">
+            <label for="amount2">700 ريال</label>
+          </div>
+          <div class="radio-option col-sm-4 col-12">
+            <input type="radio" name="amount" id="amount3">
+            <label for="amount3">500 ريال</label>
+          </div>
+        </div>
+        <div class="mt-2 col-12">
+          <input type="text" class="form-control custom-input" placeholder="أدخل مبلغًا آخر">
+        </div>
+        <p class="hint">سيتاح استقبال التبرعات حتى بعد الوصول للهدف</p>
+      </div>
+      
+      <!-- Checkbox -->
+      <div class="form-group">
+        <div class="checkbox custom-checkbox">
+          <input type="checkbox" id="agreeCheckbox" required>
+          <label>
+            أوافق على أن التبرعات التي سأساهم بجمعها في هذه الحملة ستصرفها على مجال التبرع المحدد أعلاه
+          </label>
+        </div>
+      </div>
+
+      <!-- Submit -->
+      <button type="submit" id="submitBtn" disabled class="btn btn-submit btn-block" data-toggle="modal" data-target="#campaignModal">إرسال</button>
+    </form>
+  </div>
+
+  <div id="campaignModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+  
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="section">
+            <div class="section-title">اسم الحملة</div>
+            <div class="section-content">حملة صدقة جارية لكفالة طلب العلم</div>
+          </div>
+  
+          <div class="custom-separator"></div>
+  
+          <div class="section">
+            <div class="section-title">مجال التبرع</div>
+            <div class="section-content">
+              
+              <span class="tag"><img class="px-2" src="./assets/tag.svg" alt="label"> كفالة طالب علم</span>
+            </div>
+          </div>
+  
+          <div class="custom-separator"></div>
+  
+          <div class="section">
+            <div class="section-title">المبلغ المستهدف</div>
+            <div class="section-content">14000 ريال</div>
+          </div>
+  
+          <div class="custom-separator"></div>
+  
+          <button class="btn btn-confirm" data-toggle="modal" data-target="#campaignModal">تأكيد الحملة</button>
+        </div>
+      </div>
+  
+    </div>
+  </div>
+  
+</body>
+<script src="./index.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</html>
