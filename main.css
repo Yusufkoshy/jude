@@ -204,6 +204,36 @@ input[type="radio"]:checked + label::before {
   color: var(--color-section);
 }
 
+/* Suffix input */
+.input-suffix-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-light-bg);
+  border-radius: 12px;
+  padding: 0 16px;
+  direction: rtl;
+}
+
+.custom-input-2 {
+  flex: 1;
+  border: none;
+  background-color: transparent;
+  padding: 22px 0;
+  font-size: 16px;
+  color: #3C505D;
+  outline: none;
+  box-shadow: none;
+  text-align: right;
+}
+
+.input-suffix {
+  font-size: 16px;
+  color: #3C505D;
+  font-weight: 500;
+  padding-right: 10px;
+}
+
 /* Spacing Helpers */
 .px-2 { padding-inline: 2px; }
 .px-10 { padding-inline: 10px; }
